@@ -1,0 +1,61 @@
+
+@import url('https://googleapis.com');
+
+:root{
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007bff;
+}
+
+[data-theme= "dark"] {
+  --bg-color: #1d1e1d;
+  --text-color: #f1f1f1;
+  --primary-color: #4da3ff;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.atas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#dark{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    object-fit: cover;
+    padding: 0;
+    /* border: none;
+    background: none;
+    cursor: pointer; */
+}
+
+#greeting{
+    font-size: 30px;
+}
+
+.container{
+    display: flex;
+    height: 200px;
+    background-color: rgb(173, 222, 255);
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+    margin-top: -50px;
+    margin-bottom: 80px; 
+}
+
+.maskot{
+    transform: translateY(20%);
+}
