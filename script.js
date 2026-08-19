@@ -21,3 +21,27 @@ darkbtn.addEventListener('click', () => {
 
     localStorage.setItem('theme', targetTheme);
 });
+
+pupils = document.querySelectorAll('.eye');
+
+document.addEventListener('mousemove', function(e){
+    console.log("Kursor di X:", e.clientX, "Y:", e.clientY);
+
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    pupils.forEach(function(pupil) {
+        const rect = pupil.getBoundingClientRect();
+
+        const eyeCenter_X = rect.left + (rect.width / 2);
+        const eyeCenter_Y = rect.top + (rect.height / 2);
+
+        const angle = Math.atan2(mouseY - eyeCenter_Y, mouseX - eyeCenter_X);
+        const batasGerak = 12;
+        
+        const moveX = Math.cos(angle) * batasGerak;
+        const moveY = Math.sin(angle) * batasGerak;
+
+        pupil.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+});
