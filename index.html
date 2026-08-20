@@ -9,33 +9,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="atas">
-    <span id="greeting">Hello</span>
-    <button id="dark"><img src="assets/Group 1.png" alt="dark"></button>
-    </div>
-    <div class="container-maskot">
-        <div class="container">
-            <div class="bear">
-            <img class="maskot" src="assets/Group 11.svg" alt="bear">
-           <div class="white mata-kiri">
-                <!-- Pupil Kiri -->
-                <img class="eye" src="assets/Group12.svg" alt="eye">
-            </div>
+    <section class="Judul">
+        <div class="atas">
+        <span id="greeting">Hello</span>
+        <button id="dark"><img src="assets/Group 1.png" alt="dark"></button>
+        </div>
+        <div class="container-maskot">
+            <div class="container">
+                <span id="total">Rp</span>
+                <div class="bear">
+                <img class="maskot" src="assets/Group 11.svg" alt="bear">
+            <div class="white mata-kiri">
+                    <!-- Pupil Kiri -->
+                    <img class="eye" src="assets/Group12.svg" alt="eye">
+                </div>
 
-            <!-- 3. Mata Kanan -->
-            <div class="white mata-kanan">
-                <!-- Pupil Kanan -->
-                <img class="eye" src="assets/Group12.svg" alt="eye">
-            </div>
+                <!-- 3. Mata Kanan -->
+                <div class="white mata-kanan">
+                    <!-- Pupil Kanan -->
+                    <img class="eye" src="assets/Group12.svg" alt="eye">
+                </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="kerja">
-        <span>Ayo Kerjain!</span>
-    </div>
-    <div class="selesai">
-        <span>Udah Selesai</span>
-    </div>
+    </section>
+
+    <section class="uang">
+        <div class="input">
+            <span class="akt">Aktifitas:</span>
+            <input type="text" name="aktifitas" id="aktifitas" placeholder="ex:jajan">
+            <br><span class="nom">Nominal:</span>
+            <input type="text" id="nominal" placeholder="Rp.0">
+            <br><span>Jenis</span>
+            <select name="Jenis" id="jenis">
+                 <option value="pemasukan">Pemasukan</option>
+                 <option value="pengeluaran">Pengeluaran</option>
+            </select>
+
+            <br><button class="catat">catat</button>
+        </div>
+        <div class="kerja">
+            <span id="masuk">Pemasukan:</span>
+        </div>
+        <div class="selesai">
+            <span id="keluar">Pengeluaran:</span>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>

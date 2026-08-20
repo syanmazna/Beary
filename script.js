@@ -45,3 +45,18 @@ document.addEventListener('mousemove', function(e){
         pupil.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });
 });
+
+// 1. Ambil elemen input nominal
+const inputNominal = document.getElementById('nominal');
+
+inputNominal.addEventListener('input', function(e) {
+    let nilai = e.target.value;
+
+    nilai = nilai.replace(/[^0-9]/g, '');
+
+    if (nilai !== '') {
+        e.target.value = new Intl.NumberFormat('id-ID').format(nilai);
+    } else {
+        e.target.value = '';
+    }
+});
