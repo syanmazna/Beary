@@ -60,3 +60,18 @@ inputNominal.addEventListener('input', function(e) {
         e.target.value = '';
     }
 });
+
+let simpananpemasukan = 0;
+let simpananpengeluaran = 0;
+
+const btncatat = document.getElementsByClassName('catat');
+const aktifitas = document.getElementsById('aktifitas');
+const nominal = document.getElementById('nominal');
+const jenis = document.getElementById('jenis');
+const totalmasuk = document.getElementById('totalmasuk');
+const totalkeluar = document.getElementById('totalkeluar');
+
+btncatat.addEventListener('click', function(){
+    let namaAktifitas = aktifitas.value;
+    let isiNominal = nominal.value;
+});
