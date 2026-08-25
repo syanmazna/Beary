@@ -129,7 +129,7 @@ input {
     background-color: var(--bg-color);
 }
 
-.catat{
+#catat{
     margin: 5px;
     margin-top: 10px;
     width: 100px;

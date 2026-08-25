@@ -64,14 +64,23 @@ inputNominal.addEventListener('input', function(e) {
 let simpananpemasukan = 0;
 let simpananpengeluaran = 0;
 
-const btncatat = document.getElementsByClassName('catat');
-const aktifitas = document.getElementsById('aktifitas');
+const btncatat = document.getElementById('catat');
+const aktifitas = document.getElementById('aktifitas');
 const nominal = document.getElementById('nominal');
 const jenis = document.getElementById('jenis');
 const totalmasuk = document.getElementById('totalmasuk');
 const totalkeluar = document.getElementById('totalkeluar');
 
 btncatat.addEventListener('click', function(){
+    console.log("catat");
     let namaAktifitas = aktifitas.value;
     let isiNominal = nominal.value;
+    let angkaBersih = isiNominal.replace(/[^0-9]/g, '');
+    let angkaNominal = parseInt(angkaBersih);
+    let jenisp = jenis.value;
+
+    if (isNaN(nominal) || namaAktifitas === '' || jenis === 'pilih'){
+        alert("mohon diisi semua");
+        return;
+    }
 });

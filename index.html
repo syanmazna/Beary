@@ -37,16 +37,17 @@
     <section class="uang">
         <div class="input">
             <span class="akt">Aktifitas:</span>
-            <input type="text" id="aktifitas" id="aktifitas" placeholder="ex:jajan">
+            <input type="text" id="aktifitas" placeholder="ex:jajan">
             <br><span class="nom">Nominal:</span>
             <input type="text" id="nominal" placeholder="Rp.0">
             <br><span>Jenis</span>
             <select name="Jenis" id="jenis">
+                 <option value="pilih">Pilih</option>
                  <option value="pemasukan">Pemasukan</option>
                  <option value="pengeluaran">Pengeluaran</option>
             </select>
 
-            <br><button class="catat">catat</button>
+            <br><button id="catat">catat</button>
         </div>
         <div class="kerja">
             <span id="masuk" style="font-size: 20px;">Pemasukan: <span id="totalMasuk">0</span></span>
