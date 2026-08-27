@@ -72,15 +72,33 @@ const totalmasuk = document.getElementById('totalmasuk');
 const totalkeluar = document.getElementById('totalkeluar');
 
 btncatat.addEventListener('click', function(){
-    console.log("catat");
     let namaAktifitas = aktifitas.value;
     let isiNominal = nominal.value;
     let angkaBersih = isiNominal.replace(/[^0-9]/g, '');
     let angkaNominal = parseInt(angkaBersih);
     let jenisp = jenis.value;
 
-    if (isNaN(nominal) || namaAktifitas === '' || jenis === 'pilih'){
+    if (isNaN(angkaNominal) || namaAktifitas === '' || jenisp === 'pilih'){
         alert("mohon diisi semua");
         return;
     }
+
+    let nominalRupiah = new Intl.NumberFormat('id-ID').format(angkaNominal);
+    let itemBaru = document.createElement('p'); 
+    
+    itemBaru.innerText = `- ${namaAktifitas} : Rp ${angkaNominal} (${jenisp})`;
+
+    if (jenis === 'pemasukan'){
+        simpananpemasukan = simpananpemasukan + angkaNominal;
+        totalMasuk.innerText = new Intl.NumberFormat('id-ID').format(simpananpemasukan);
+    } else if (jenis === 'pengeluaran'){
+        simpananpengeluaran = simpananpengeluaran + angkaNominal;
+        totalKeluar.innerText = new Intl.NumberFormat('id-ID').format(simpananpengeluaran);
+    }
+
+    // daftarRiwayat.appendChild(itemBaru);
+    aktifitas.value = '';
+    nominal.value = '';
+
+     console.log("Aktifitas:", namaAktifitas, "Nominal:", isiNominal, "Jenis:", jenisp);
 });
